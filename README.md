@@ -1,4 +1,4 @@
-🎮 Tic-Tac-Toe Console Game (Java)
+#🎮 Tic-Tac-Toe Console Game (Java)
 
 A simple two-player Tic-Tac-Toe game built using Core Java.
 The game runs in the console and demonstrates the use of arrays, loops, condition checking, and user input handling.
