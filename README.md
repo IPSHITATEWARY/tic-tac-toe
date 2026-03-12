@@ -1,3 +1,169 @@
-# tic-tac-toe
-1. Project Title and HeadlineTic-Tac-Toe Console Game: Array Management and Win Condition Logic (Java)2. Short DescriptionThis project implements a classic two-player Tic-Tac-Toe game using the Java console. The core is built around a 3x3 array to represent the board, and simple methods to handle player moves, display the board, and check for a winner based on straight-line completion.3. Tech StackLanguage: Java (Core)Libraries: java.util.Scanner (Crucial for taking user input)Data Structure: A char array (char[][] board = new char[3][3];) for the game state.4. Game Flow (Usage)The game follows a simple turn-based loop handled by the main method:Initialization: The $3 \times 3$ board array is created and filled with empty spaces (e.g., a space character ' ').Display Board: The current state of the board is printed to the console.Player Turn: The current player ('X' or 'O') is prompted to enter their desired move (typically by entering row and column indices, e.g., '1 2').Input Validation: The game checks if the chosen spot is within bounds and is currently empty.Update Board: If the move is valid, the array is updated with the player's marker.Check Status: The game calls a method to check for a win or a draw.Loop/Exit: If the game is not over, the turn switches, and the loop repeats (Step 2). If a winner or draw is detected, the final result is printed, and the program exits.Walk-Through Key Visuals (Code Concepts)The game relies on three primary methods/classes:1. The GameEngine ClassThis contains the main method and controls the overall game loop and player turns.Usage: Manages the Scanner object for input and alternates the current player variable (e.g., char currentPlayer = 'X';).2. The Board Management MethodA method (e.g., printBoard(char[][] board)) responsible for displaying the current state of the game to the console.Concept: Iterates through the $3 \times 3$ array and prints the characters, using separators (like | and -) to visually format the grid.3. The WinChecker Method (The Core Logic)The most critical part, responsible for determining if the last move resulted in a win.Concept: This method (e.g., checkWin(char[][] board, char marker)) checks 8 specific conditions for the given player's marker:3 Rows: Checks if board[i][0] == board[i][1] == board[i][2] for $i = 0, 1, 2$.3 Columns: Checks if board[0][j] == board[1][j] == board[2][j] for $j = 0, 1, 2$.2 Diagonals: Checks the top-left to bottom-right diagonal (board[0][0], board[1][1], board[2][2]) and the top-right to bottom-left diagonal (board[0][2], board[1][1], board[2][0]).
-https://github.com/IPSHITATEWARY/tic-tac-toe/blob/main/Screenshot%202025-10-24%20075405.png
+🎮 Tic-Tac-Toe Console Game (Java)
+
+A simple two-player Tic-Tac-Toe game built using Core Java.
+The game runs in the console and demonstrates the use of arrays, loops, condition checking, and user input handling.
+
+📌 Project Overview
+
+This project implements the classic Tic-Tac-Toe game where two players take turns marking spaces on a 3×3 grid.
+The game logic is built using a 2D char array, and methods are used to manage the board, validate input, and determine the winner.
+
+The objective is simple:
+Get three marks in a row (horizontal, vertical, or diagonal) before your opponent.
+
+🛠 Tech Stack
+Technology	Purpose
+Java (Core)	Main programming language
+Scanner (java.util)	Taking user input
+2D Array (char[][])	Representing the game board
+Console Output	Displaying the board and game messages
+🧠 Data Structure Used
+char[][] board = new char[3][3];
+
+The 3×3 character array stores the current state of the game board.
+
+Example board:
+
+X | O | X
+---------
+O | X |  
+---------
+  | O | X
+🔄 Game Flow
+
+The program follows a turn-based loop:
+
+Initialize Board
+
+Create a 3×3 board and fill it with empty spaces.
+
+Display Board
+
+Print the board layout in the console.
+
+Player Turn
+
+Current player (X or O) enters row and column.
+
+Input Validation
+
+Check if the move is within bounds and the cell is empty.
+
+Update Board
+
+Place the player’s marker in the selected cell.
+
+Check Game Status
+
+Check for win or draw.
+
+Switch Player
+
+If the game is not over, the next player takes a turn.
+
+🧩 Key Components
+1️⃣ Game Engine
+
+Controls the main game loop and manages player turns.
+
+Example:
+
+char currentPlayer = 'X';
+
+Handles:
+
+Player switching
+
+Input handling
+
+Game termination
+
+2️⃣ Board Display Method
+
+Responsible for printing the board neatly.
+
+Example method:
+
+printBoard(char[][] board)
+
+Concept:
+
+Iterate through the 2D array
+
+Print characters with separators like | and -
+
+Example output:
+
+X | O | X
+---------
+O | X | O
+---------
+  |   | X
+3️⃣ Win Checker (Core Logic)
+
+Determines if a player has won the game.
+
+Method example:
+
+checkWin(char[][] board, char marker)
+
+The method checks 8 winning conditions:
+
+Rows
+board[i][0] == board[i][1] == board[i][2]
+Columns
+board[0][j] == board[1][j] == board[2][j]
+Diagonals
+board[0][0] → board[1][1] → board[2][2]
+board[0][2] → board[1][1] → board[2][0]
+📷 Project Screenshot
+
+▶️ How to Run
+
+Clone the repository
+
+git clone https://github.com/IPSHITATEWARY/tic-tac-toe.git
+
+Navigate to the project folder
+
+cd tic-tac-toe
+
+Compile the Java file
+
+javac TicTacToe.java
+
+Run the program
+
+java TicTacToe
+🎯 Learning Outcomes
+
+This project demonstrates:
+
+2D Array Manipulation
+
+User Input Handling
+
+Game Logic Implementation
+
+Control Flow & Loops
+
+Basic Object-Oriented Programming Concepts
+
+📌 Future Improvements
+
+Possible upgrades:
+
+Add single player mode (AI opponent)
+
+Implement a GUI version using Java Swing
+
+Add score tracking
+
+Improve input validation
+
+👩‍💻 Author
+
+Ipshita Tewary
+
+GitHub:
+👉 https://github.com/IPSHITATEWARY
